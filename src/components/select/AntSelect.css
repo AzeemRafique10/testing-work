@@ -1,0 +1,28 @@
+.select-container {
+  position: relative;
+  width: 100%;
+}
+
+.floating-label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+  color: #aaa;
+  background: white;
+  padding: 0 5px;
+  pointer-events: none;
+  user-select: none;
+}
+
+.select-container:has(.ant-select-focused) .floating-label,
+.select-container:has(.ant-select-selection-item) .floating-label {
+  top: -8px;
+  left: 10px;
+  font-size: 12px;
+  color: #007bff;
+  z-index: 1;
+  padding: 0 4px;
+  transform: none;
+}
